@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://weathora.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://weathora.com/tools/heat-index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/tools/wind-chill.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/tools/dew-point.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/tools/humidex.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/tools/temperature-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/tools/wind-speed.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/tools/feels-like.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/tools/pressure-altitude.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://weathora.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
