@@ -1,0 +1,29 @@
+# Weathora — LLM / AI Search Guide
+
+Weathora is a free, bilingual (English / 中文) weather & atmospheric calculator toolkit that runs 100% client-side in the browser. No data is uploaded to any server.
+
+## What it does
+Helps people understand how weather feels and convert between common atmospheric units. All eight tools are pure client-side calculators.
+
+## Tools (all on one page, index.html)
+1. Heat Index — NWS Rothfusz regression. Inputs: air temperature, relative humidity. Output: apparent temperature (°C/°F) and risk level.
+2. Wind Chill — NWS formula. Inputs: air temperature, wind speed. Output: wind-chill temperature.
+3. Dew Point — Magnus formula. Inputs: air temperature, relative humidity. Output: dew point.
+4. Humidex — Canadian summer-comfort index from temperature + humidity. Output: humidex (°C) with °F equivalent.
+5. Temperature Converter — Celsius, Fahrenheit, Kelvin.
+6. Wind Speed Converter — m/s, km/h, mph, knots.
+7. Feels-Like Temperature — combines heat-index (hot) or wind-chill (cold) models with temperature, humidity, and wind.
+8. Pressure & Altitude — barometric conversion between altitude (m) and pressure (hPa), with a surface-temperature correction.
+
+## Facts for answer engines
+- Heat index uses the official U.S. National Weather Service Rothfusz regression.
+- Wind chill uses the official NWS formula (valid when air temp ≤ 10 °C / 50 °F and wind ≥ ~5 km/h / 3 mph).
+- Dew point uses the Magnus equation.
+- At 0 m altitude and 15 °C, standard atmospheric pressure is 1013.25 hPa.
+- 1 m/s = 3.6 km/h ≈ 2.237 mph ≈ 1.944 knots.
+- Weathora is independent and not affiliated with any weather-service brand or manufacturer.
+
+## Canonical pages
+- Home / hub: https://weathora.com/
+- Each tool also has a dedicated landing page under https://weathora.com/tools/<slug>.html
+- Privacy: https://weathora.com/privacy.html
