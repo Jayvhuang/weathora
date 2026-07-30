@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Weathora — Free Online Weather & Atmospheric Calculators (Heat Index, Wind Chill, Dew Point)</title>
+<meta name="description" content="Weathora is a free, bilingual weather & atmospheric toolkit that runs 100% in your browser. Calculate heat index, wind chill, dew point, humidex, feels-like temperature, convert temperature and wind speed, and convert pressure to altitude — no upload, no sign-up. 中文界面可用。" />
+<meta name="keywords" content="heat index calculator, wind chill calculator, dew point calculator, humidex calculator, temperature converter, wind speed converter, feels like temperature, pressure altitude calculator, 酷热指数计算器, 风寒指数计算器, 露点计算器, 体感温度计算器" />
+<meta name="author" content="Weathora" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://weathora.com/" />
+<link rel="alternate" hreflang="en" href="https://weathora.com/" />
+<link rel="alternate" hreflang="zh-CN" href="https://weathora.com/" />
+<link rel="alternate" hreflang="x-default" href="https://weathora.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Weathora — Free Online Weather & Atmospheric Calculators" />
+<meta property="og:description" content="Calculate heat index, wind chill, dew point, humidex, feels-like, convert temperature / wind speed / pressure — all in your browser. No upload, no sign-up. 中文界面可用。" />
+<meta property="og:url" content="https://weathora.com/" />
+<meta property="og:image" content="https://weathora.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Weathora — Free Online Weather & Atmospheric Calculators" />
+<meta name="twitter:description" content="Free, bilingual weather & atmospheric tools that run in your browser. Heat index, wind chill, dew point, humidex, temperature & wind conversion, and more." />
+<meta name="twitter:image" content="https://weathora.com/og-image.png" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="styles.css" />
+<!-- Google AdSense (Auto Ads) — placeholder, inert until a real account is connected.
+     To go live: replace ca-pub-XXXXXXXXXXXXXX with your real publisher ID and uncomment. -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Weathora",
+  "url": "https://weathora.com/",
+  "description": "Free, bilingual weather & atmospheric toolkit that runs entirely in your browser.",
+  "inLanguage": ["en", "zh-CN"],
+  "potentialAction": { "@type": "SearchAction", "target": "https://weathora.com/#tool-heat", "query-input": "required name=query" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Weathora Weather Tools",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Heat Index Calculator", "url": "https://weathora.com/tools/heat-index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Wind Chill Calculator", "url": "https://weathora.com/tools/wind-chill.html" },
+    { "@type": "ListItem", "position": 3, "name": "Dew Point Calculator", "url": "https://weathora.com/tools/dew-point.html" },
+    { "@type": "ListItem", "position": 4, "name": "Humidex Calculator", "url": "https://weathora.com/tools/humidex.html" },
+    { "@type": "ListItem", "position": 5, "name": "Temperature Converter", "url": "https://weathora.com/tools/temperature-converter.html" },
+    { "@type": "ListItem", "position": 6, "name": "Wind Speed Converter", "url": "https://weathora.com/tools/wind-speed.html" },
+    { "@type": "ListItem", "position": 7, "name": "Feels-Like Temperature", "url": "https://weathora.com/tools/feels-like.html" },
+    { "@type": "ListItem", "position": 8, "name": "Pressure & Altitude Calculator", "url": "https://weathora.com/tools/pressure-altitude.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Weathora",
+  "url": "https://weathora.com/",
+  "logo": "https://weathora.com/favicon.svg",
+  "description": "A free, bilingual weather & atmospheric toolkit that runs entirely in your browser."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is my data uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every Weathora tool runs entirely in your browser using client-side JavaScript. The numbers you enter never leave your device." } },
+    { "@type": "Question", "name": "Is Weathora free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All eight weather tools are completely free, with no account, no watermarks, and no limits." } },
+    { "@type": "Question", "name": "Does Weathora support Chinese (中文)?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Weathora has a one-click English / 中文 toggle in the header, so the entire interface can be switched to Simplified Chinese." } },
+    { "@type": "Question", "name": "Which weather calculations are included?", "acceptedAnswer": { "@type": "Answer", "text": "Heat index, wind chill, dew point, humidex, temperature converter, wind speed converter, feels-like temperature, and pressure-to-altitude conversion." } },
+    { "@type": "Question", "name": "Are the formulas accurate?", "acceptedAnswer": { "@type": "Answer", "text": "Weathora uses the official NWS Rothfusz heat-index regression, the NWS wind-chill formula, the Magnus dew-point equation, the standard humidex model, and the barometric pressure formula." } }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><span class="logo">W</span><span>Weathora</span></a>
+    <div class="header-actions">
+      <div class="seg" id="lang-seg" role="group" aria-label="Language">
+        <button data-lang-set="en" class="active">EN</button>
+        <button data-lang-set="zh-CN">中文</button>
+      </div>
+      <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">🌓 <span data-en="Theme" data-zh="主题">Theme</span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <h1><span class="hl" data-en="Weather math that never leaves your browser" data-zh="永远不会离开你浏览器的天气计算">Weather math that never leaves your browser</span></h1>
+  <p class="sub" data-en="Calculate heat index, wind chill, dew point, humidex, and feels-like temperature; convert temperature, wind speed, and pressure to altitude — eight free, bilingual tools that run 100% on your device. No upload, no sign-up." data-zh="计算酷热指数、风寒指数、露点、湿度指数与体感温度；换算温度、风速与海拔气压——八款免费的双语工具，全部在你的设备上运行。无需上传，无需注册。">Calculate heat index, wind chill, dew point, humidex, and feels-like temperature; convert temperature, wind speed, and pressure to altitude — eight free, bilingual tools that run 100% on your device. No upload, no sign-up.</p>
+  <div class="badges">
+    <span class="badge"><span class="dot"></span><span data-en="Runs 100% in your browser" data-zh="全程在你的浏览器中运行">Runs 100% in your browser</span></span>
+    <span class="badge"><span class="dot"></span><span data-en="No account needed" data-zh="无需注册账号">No account needed</span></span>
+    <span class="badge"><span class="dot"></span><span data-en="Accurate formulas" data-zh="精确公式">Accurate formulas</span></span>
+    <span class="badge"><span class="dot"></span><span data-en="English / 中文" data-zh="英文 / 中文 双语">English / 中文</span></span>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><b data-en="Pick a tool" data-zh="选择一个工具">Pick a tool</b><span data-en="Heat index, wind chill, dew point — all in one place." data-zh="酷热指数、风寒指数、露点——一应俱全。">Heat index, wind chill, dew point — all in one place.</span></div>
+    <div class="step"><div class="n">2</div><b data-en="Enter your numbers" data-zh="输入数值">Enter your numbers</b><span data-en="Type a temperature, humidity, or wind speed. Results update live." data-zh="输入温度、湿度或风速，结果实时更新。">Type a temperature, humidity, or wind speed. Results update live.</span></div>
+    <div class="step"><div class="n">3</div><b data-en="Read the result" data-zh="查看结果">Read the result</b><span data-en="Get heat index, humidex, feels-like, and conversions instantly." data-zh="即刻得到酷热指数、湿度指数、体感温度与各类换算。">Get heat index, humidex, feels-like, and conversions instantly.</span></div>
+  </div>
+</section>
+
+<nav class="toolnav">
+  <div class="wrap toolnav-inner" id="toolnav">
+    <button class="tab active" data-tool="heat" data-en="Heat Index" data-zh="酷热指数">Heat Index</button>
+    <button class="tab" data-tool="chill" data-en="Wind Chill" data-zh="风寒指数">Wind Chill</button>
+    <button class="tab" data-tool="dew" data-en="Dew Point" data-zh="露点">Dew Point</button>
+    <button class="tab" data-tool="hum" data-en="Humidex" data-zh="湿度指数">Humidex</button>
+    <button class="tab" data-tool="temp" data-en="Temperature" data-zh="温度换算">Temperature</button>
+    <button class="tab" data-tool="wind" data-en="Wind Speed" data-zh="风速换算">Wind Speed</button>
+    <button class="tab" data-tool="feels" data-en="Feels-Like" data-zh="体感温度">Feels-Like</button>
+    <button class="tab" data-tool="press" data-en="Pressure / Altitude" data-zh="气压 / 海拔">Pressure / Altitude</button>
+  </div>
+</nav>
+
+<main class="wrap studio">
+
+  <!-- 1. HEAT INDEX -->
+  <section class="tool-panel panel active" data-tool="heat" id="tool-heat">
+    <div class="panel">
+      <label class="panel-label" data-en="Conditions" data-zh="环境条件">Conditions</label>
+      <div class="row"><span class="opt-label" data-en="Air temperature" data-zh="空气温度">Air temperature</span><span style="display:flex;gap:8px;align-items:center"><input type="number" id="heat-t" value="32" step="0.1" style="width:118px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /><select id="heat-tu" style="width:80px;border:1px solid var(--border);border-radius:8px;padding:7px 8px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="C" selected>°C</option><option value="F">°F</option></select></span></div>
+      <div class="row"><span class="opt-label" data-en="Relative humidity (%)" data-zh="相对湿度 (%)">Relative humidity (%)</span><input type="number" id="heat-rh" value="60" min="0" max="100" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Heat index" data-zh="酷热指数">Heat index</span><b id="heat-out" class="rv">—</b></div>
+          <div><span class="rk" data-en="Risk level" data-zh="风险等级">Risk level</span><b id="heat-cat" class="rv">—</b></div>
+          <div><span class="rk" data-en="vs. air temp" data-zh="对比气温">vs. air temp</span><b id="heat-diff" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Heat index uses the NWS Rothfusz regression (valid for 27–43 °C / 80–110 °F). At low temperatures it equals the air temperature." data-zh="酷热指数采用 NWS Rothfusz 回归公式（适用于 27–43°C / 80–110°F）。低温时等于气温。">Heat index uses the NWS Rothfusz regression (valid for 27–43 °C / 80–110 °F). At low temperatures it equals the air temperature.</p>
+    </div>
+  </section>
+
+  <!-- 2. WIND CHILL -->
+  <section class="tool-panel panel" data-tool="chill" id="tool-chill">
+    <div class="panel">
+      <label class="panel-label" data-en="Conditions" data-zh="环境条件">Conditions</label>
+      <div class="row"><span class="opt-label" data-en="Air temperature" data-zh="空气温度">Air temperature</span><span style="display:flex;gap:8px;align-items:center"><input type="number" id="chill-t" value="0" step="0.1" style="width:118px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /><select id="chill-tu" style="width:80px;border:1px solid var(--border);border-radius:8px;padding:7px 8px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="C" selected>°C</option><option value="F">°F</option></select></span></div>
+      <div class="row"><span class="opt-label" data-en="Wind speed" data-zh="风速">Wind speed</span><span style="display:flex;gap:8px;align-items:center"><input type="number" id="chill-w" value="15" step="0.1" style="width:110px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /><select id="chill-wu" style="width:88px;border:1px solid var(--border);border-radius:8px;padding:7px 8px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="kmh" selected>km/h</option><option value="mph">mph</option><option value="ms">m/s</option><option value="kt">knots</option></select></span></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Wind chill" data-zh="风寒温度">Wind chill</span><b id="chill-out" class="rv">—</b></div>
+          <div><span class="rk" data-en="vs. air temp" data-zh="对比气温">vs. air temp</span><b id="chill-diff" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Wind chill uses the NWS formula (valid for air temperature ≤ 10 °C / 50 °F and wind ≥ 5 km/h / 3 mph)." data-zh="风寒指数采用 NWS 公式（适用于气温 ≤ 10°C / 50°F 且风速 ≥ 5 km/h / 3 mph）。">Wind chill uses the NWS formula (valid for air temperature ≤ 10 °C / 50 °F and wind ≥ 5 km/h / 3 mph).</p>
+    </div>
+  </section>
+
+  <!-- 3. DEW POINT -->
+  <section class="tool-panel panel" data-tool="dew" id="tool-dew">
+    <div class="panel">
+      <label class="panel-label" data-en="Conditions" data-zh="环境条件">Conditions</label>
+      <div class="row"><span class="opt-label" data-en="Air temperature" data-zh="空气温度">Air temperature</span><span style="display:flex;gap:8px;align-items:center"><input type="number" id="dew-t" value="25" step="0.1" style="width:118px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /><select id="dew-tu" style="width:80px;border:1px solid var(--border);border-radius:8px;padding:7px 8px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="C" selected>°C</option><option value="F">°F</option></select></span></div>
+      <div class="row"><span class="opt-label" data-en="Relative humidity (%)" data-zh="相对湿度 (%)">Relative humidity (%)</span><input type="number" id="dew-rh" value="60" min="0" max="100" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Dew point" data-zh="露点">Dew point</span><b id="dew-out" class="rv">—</b></div>
+          <div><span class="rk" data-en="Comfort" data-zh="体感">Comfort</span><b id="dew-cat" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Dew point uses the Magnus formula. Higher dew points mean more moisture and a muggy feeling." data-zh="露点采用 Magnus 公式。露点越高，空气越潮湿闷热。">Dew point uses the Magnus formula. Higher dew points mean more moisture and a muggy feeling.</p>
+    </div>
+  </section>
+
+  <!-- 4. HUMIDEX -->
+  <section class="tool-panel panel" data-tool="hum" id="tool-hum">
+    <div class="panel">
+      <label class="panel-label" data-en="Conditions" data-zh="环境条件">Conditions</label>
+      <div class="row"><span class="opt-label" data-en="Air temperature" data-zh="空气温度">Air temperature</span><span style="display:flex;gap:8px;align-items:center"><input type="number" id="hum-t" value="30" step="0.1" style="width:118px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /><select id="hum-tu" style="width:80px;border:1px solid var(--border);border-radius:8px;padding:7px 8px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="C" selected>°C</option><option value="F">°F</option></select></span></div>
+      <div class="row"><span class="opt-label" data-en="Relative humidity (%)" data-zh="相对湿度 (%)">Relative humidity (%)</span><input type="number" id="hum-rh" value="70" min="0" max="100" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Humidex" data-zh="湿度指数">Humidex</span><b id="hum-out" class="rv">—</b></div>
+          <div><span class="rk" data-en="≈ °F" data-zh="≈ °F">≈ °F</span><b id="hum-f" class="rv">—</b></div>
+          <div><span class="rk" data-en="Dew point used" data-zh="采用露点">Dew point used</span><b id="hum-dp" class="rv">—</b></div>
+          <div><span class="rk" data-en="Discomfort" data-zh="舒适度">Discomfort</span><b id="hum-cat" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Humidex is a Canadian summer-comfort index. It is shown in °C (the conventional unit); the °F equivalent is also given." data-zh="湿度指数是加拿大夏季舒适度指标，以 °C 表示（惯例单位），同时给出 °F 等效值。">Humidex is a Canadian summer-comfort index. It is shown in °C (the conventional unit); the °F equivalent is also given.</p>
+    </div>
+  </section>
+
+  <!-- 5. TEMPERATURE CONVERTER -->
+  <section class="tool-panel panel" data-tool="temp" id="tool-temp">
+    <div class="panel">
+      <label class="panel-label" data-en="Convert from" data-zh="从以下单位转换">Convert from</label>
+      <div class="row"><span class="opt-label" data-en="Value" data-zh="数值">Value</span><input type="number" id="tmp-v" value="25" step="0.1" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+      <div class="row"><span class="opt-label" data-en="From unit" data-zh="原单位">From unit</span><select id="tmp-from" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="C" selected>°C</option><option value="F">°F</option><option value="K">K</option></select></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Celsius" data-zh="摄氏度">Celsius</span><b id="tmp-c" class="rv">—</b></div>
+          <div><span class="rk" data-en="Fahrenheit" data-zh="华氏度">Fahrenheit</span><b id="tmp-f" class="rv">—</b></div>
+          <div><span class="rk" data-en="Kelvin" data-zh="开尔文">Kelvin</span><b id="tmp-k" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Converts between Celsius, Fahrenheit, and Kelvin. Results update as you type." data-zh="在摄氏度、华氏度与开尔文之间换算，输入即更新。">Converts between Celsius, Fahrenheit, and Kelvin. Results update as you type.</p>
+    </div>
+  </section>
+
+  <!-- 6. WIND SPEED CONVERTER -->
+  <section class="tool-panel panel" data-tool="wind" id="tool-wind">
+    <div class="panel">
+      <label class="panel-label" data-en="Convert from" data-zh="从以下单位转换">Convert from</label>
+      <div class="row"><span class="opt-label" data-en="Value" data-zh="数值">Value</span><input type="number" id="wnd-v" value="10" step="0.1" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+      <div class="row"><span class="opt-label" data-en="From unit" data-zh="原单位">From unit</span><select id="wnd-from" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="ms" selected>m/s</option><option value="kmh">km/h</option><option value="mph">mph</option><option value="kt">knots</option></select></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Meters / sec" data-zh="米 / 秒">Meters / sec</span><b id="wnd-ms" class="rv">—</b></div>
+          <div><span class="rk" data-en="Km / hour" data-zh="公里 / 时">Km / hour</span><b id="wnd-kmh" class="rv">—</b></div>
+          <div><span class="rk" data-en="Miles / hour" data-zh="英里 / 时">Miles / hour</span><b id="wnd-mph" class="rv">—</b></div>
+          <div><span class="rk" data-en="Knots" data-zh="节">Knots</span><b id="wnd-kt" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Converts wind speed between m/s, km/h, mph, and knots. 1 m/s ≈ 3.6 km/h ≈ 2.237 mph." data-zh="在 m/s、km/h、mph 与节之间换算。1 m/s ≈ 3.6 km/h ≈ 2.237 mph。">Converts wind speed between m/s, km/h, mph, and knots. 1 m/s ≈ 3.6 km/h ≈ 2.237 mph.</p>
+    </div>
+  </section>
+
+  <!-- 7. FEELS-LIKE -->
+  <section class="tool-panel panel" data-tool="feels" id="tool-feels">
+    <div class="panel">
+      <label class="panel-label" data-en="Conditions" data-zh="环境条件">Conditions</label>
+      <div class="row"><span class="opt-label" data-en="Air temperature" data-zh="空气温度">Air temperature</span><span style="display:flex;gap:8px;align-items:center"><input type="number" id="feels-t" value="30" step="0.1" style="width:118px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /><select id="feels-tu" style="width:80px;border:1px solid var(--border);border-radius:8px;padding:7px 8px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="C" selected>°C</option><option value="F">°F</option></select></span></div>
+      <div class="row"><span class="opt-label" data-en="Relative humidity (%)" data-zh="相对湿度 (%)">Relative humidity (%)</span><input type="number" id="feels-rh" value="60" min="0" max="100" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+      <div class="row"><span class="opt-label" data-en="Wind speed" data-zh="风速">Wind speed</span><span style="display:flex;gap:8px;align-items:center"><input type="number" id="feels-w" value="10" step="0.1" style="width:110px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /><select id="feels-wu" style="width:88px;border:1px solid var(--border);border-radius:8px;padding:7px 8px;background:var(--surface-2);color:var(--text);font-size:13px"><option value="ms" selected>m/s</option><option value="kmh">km/h</option><option value="mph">mph</option><option value="kt">knots</option></select></span></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Feels like" data-zh="体感温度">Feels like</span><b id="feels-out" class="rv">—</b></div>
+          <div><span class="rk" data-en="Model used" data-zh="采用模型">Model used</span><b id="feels-model" class="rv">—</b></div>
+          <div><span class="rk" data-en="vs. air temp" data-zh="对比气温">vs. air temp</span><b id="feels-diff" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Uses the heat-index model when hot (≥ 27 °C), the wind-chill model when cold (≤ 10 °C with wind), otherwise the air temperature." data-zh="炎热时（≥ 27°C）采用酷热指数模型，寒冷且有风时（≤ 10°C）采用风寒模型，否则取气温。">Uses the heat-index model when hot (≥ 27 °C), the wind-chill model when cold (≤ 10 °C with wind), otherwise the air temperature.</p>
+    </div>
+  </section>
+
+  <!-- 8. PRESSURE / ALTITUDE -->
+  <section class="tool-panel panel" data-tool="press" id="tool-press">
+    <div class="panel">
+      <label class="panel-label" data-en="Mode" data-zh="模式">Mode</label>
+      <select id="press-mode" style="width:100%;border:1px solid var(--border);border-radius:8px;padding:9px 10px;background:var(--surface-2);color:var(--text);font-size:14px">
+        <option value="toPress" data-en="Altitude → Pressure" data-zh="海拔 → 气压">Altitude → Pressure</option>
+        <option value="toAlt" data-en="Pressure → Altitude" data-zh="气压 → 海拔">Pressure → Altitude</option>
+      </select>
+      <div id="press-alt-row" style="margin-top:12px">
+        <div class="row"><span class="opt-label" data-en="Altitude (m)" data-zh="海拔 (米)">Altitude (m)</span><input type="number" id="press-alt" value="1000" step="10" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+      </div>
+      <div id="press-press-row" style="margin-top:12px;display:none">
+        <div class="row"><span class="opt-label" data-en="Pressure (hPa)" data-zh="气压 (hPa)">Pressure (hPa)</span><input type="number" id="press-pa" value="900" step="1" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+      </div>
+      <div class="row" style="margin-top:12px"><span class="opt-label" data-en="Surface temp (°C)" data-zh="地表温度 (°C)">Surface temp (°C)</span><input type="number" id="press-tc" value="15" step="1" style="width:150px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;background:var(--surface-2);color:var(--text);font-size:13px" /></div>
+    </div>
+    <div class="panel preview-panel">
+      <div class="out-box">
+        <div class="result-grid">
+          <div><span class="rk" data-en="Pressure" data-zh="气压">Pressure</span><b id="press-paout" class="rv">—</b></div>
+          <div><span class="rk" data-en="Altitude" data-zh="海拔">Altitude</span><b id="press-altout" class="rv">—</b></div>
+          <div><span class="rk" data-en="Equivalent" data-zh="等效值">Equivalent</span><b id="press-eq" class="rv">—</b></div>
+        </div>
+      </div>
+      <p class="hint" data-en="Barometric formula with a temperature correction. At 0 m and 15 °C the standard pressure is 1013.25 hPa." data-zh="带温度修正的气压公式。在 0 米、15°C 时标准气压为 1013.25 hPa。">Barometric formula with a temperature correction. At 0 m and 15 °C the standard pressure is 1013.25 hPa.</p>
+    </div>
+  </section>
+
+</main>
+
+<section class="features wrap">
+  <h2 data-en="Why Weathora" data-zh="为什么选择 Weathora">Why Weathora</h2>
+  <div class="feature-grid">
+    <div class="feature"><div class="ficon">🌦️</div><h3 data-en="Private by design" data-zh="隐私优先">Private by design</h3><p data-en="Everything runs locally. The numbers you type never leave the browser tab." data-zh="所有计算都在本地完成，你输入的数值绝不会离开浏览器。">Everything runs locally. The numbers you type never leave the browser tab.</p></div>
+    <div class="feature"><div class="ficon">🌐</div><h3 data-en="Bilingual" data-zh="中英双语">Bilingual</h3><p data-en="Switch between English and 中文 with one click — interface included." data-zh="一键在英文与中文之间切换，界面完整支持。">Switch between English and 中文 with one click — interface included.</p></div>
+    <div class="feature"><div class="ficon">📐</div><h3 data-en="Accurate formulas" data-zh="精确公式">Accurate formulas</h3><p data-en="NWS heat index & wind chill, Magnus dew point, standard humidex, and barometric pressure." data-zh="NWS 酷热指数与风寒指数、Magnus 露点、标准湿度指数，以及气压公式。">NWS heat index & wind chill, Magnus dew point, standard humidex, and barometric pressure.</p></div>
+    <div class="feature"><div class="ficon">⚡</div><h3 data-en="8 tools, one place" data-zh="8 款工具，一处集成">8 tools, one place</h3><p data-en="Heat index, wind chill, dew point, humidex, temperature, wind speed, feels-like, pressure/altitude." data-zh="酷热指数、风寒指数、露点、湿度指数、温度、风速、体感温度与气压海拔。">Heat index, wind chill, dew point, humidex, temperature, wind speed, feels-like, pressure/altitude.</p></div>
+    <div class="feature"><div class="ficon">💸</div><h3 data-en="Free &amp; unlimited" data-zh="免费且不限次">Free &amp; unlimited</h3><p data-en="No sign-up, no watermarks, no usage caps. Open a tool and start." data-zh="无需注册、不加水印、不限次数。打开即用。">No sign-up, no watermarks, no usage caps. Open a tool and start.</p></div>
+    <div class="feature"><div class="ficon">📱</div><h3 data-en="Works everywhere" data-zh="随处可用">Works everywhere</h3><p data-en="Responsive layout that feels native on desktop, tablet, and phone." data-zh="响应式布局，在桌面、平板和手机上都流畅自然。">Responsive layout that feels native on desktop, tablet, and phone.</p></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:10px"><span class="logo">W</span><span>Weathora</span></div>
+        <p class="priv-safe" data-en="A free, bilingual weather & atmospheric toolkit. Everything runs in your browser — your numbers never leave your device." data-zh="免费、双语的天气与大气工具集。所有计算都在你的浏览器中完成——数值绝不离开你的设备。">A free, bilingual weather & atmospheric toolkit. Everything runs in your browser — your numbers never leave your device.</p>
+      </div>
+      <div>
+        <h4 data-en="Weather tools" data-zh="天气工具">Weather tools</h4>
+        <ul>
+          <li><a href="index.html#tool-heat" data-en="Heat Index" data-zh="酷热指数">Heat Index</a></li>
+          <li><a href="index.html#tool-chill" data-en="Wind Chill" data-zh="风寒指数">Wind Chill</a></li>
+          <li><a href="index.html#tool-dew" data-en="Dew Point" data-zh="露点">Dew Point</a></li>
+          <li><a href="index.html#tool-hum" data-en="Humidex" data-zh="湿度指数">Humidex</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Legal" data-zh="法律">Legal</h4>
+        <ul>
+          <li><a href="privacy.html" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a></li>
+          <li><a href="index.html" data-en="All tools" data-zh="全部工具">All tools</a></li>
+          <li><a href="https://www.amazon.com/s?k=weather+station&tag=weathora-20" target="_blank" rel="sponsored nofollow noopener" data-en="Weather stations on Amazon" data-zh="Amazon 上的气象站">Weather stations on Amazon</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclosure" data-en="As an Amazon Associate, Weathora earns from qualifying purchases. Some links may be affiliate links. All calculations are done locally in your browser; no data is uploaded to our servers. Weathora is an independent tool and is not affiliated with any weather-service brand or manufacturer." data-zh="作为 Amazon Associates 会员，Weathora 可从符合条件的购买中获得收益。部分链接可能为联盟链接。所有计算均在你的浏览器本地完成，数据不会上传到我们的服务器。Weathora 是独立工具，与任何气象服务品牌或厂商无隶属关系。">As an Amazon Associate, Weathora earns from qualifying purchases. Some links may be affiliate links. All calculations are done locally in your browser; no data is uploaded to our servers. Weathora is an independent tool and is not affiliated with any weather-service brand or manufacturer.</p>
+    <p class="copyright" data-en="© 2026 Weathora. Last updated: 2026-07-27." data-zh="© 2026 Weathora。最后更新：2026-07-27。">© 2026 Weathora. Last updated: 2026-07-27.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
